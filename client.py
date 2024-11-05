@@ -47,6 +47,9 @@ def read_server_ips():
 
 
 if __name__ == "__main__":
-	while True:
-		generate_load(num_requests=1000)
+	mode = input("Enter the high/low mode : ")
+	if mode == 'high':
+		generate_load(num_requests=10000)
+	else:
+		generate_load(num_requests=100)
 		# time.sleep(10)
